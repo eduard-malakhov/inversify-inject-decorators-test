@@ -35,4 +35,9 @@ container.bind<Weapon>(TYPES.Weapon).to(Sword);
 let warrior = new Warrior();
 console.log("warrior.weapon is instanceof Sword? " + (warrior.weapon instanceof Sword)); // true
 
+console.log("Delete warrior.weapon");
+delete warrior.weapon;
+
+console.log("warrior.weapon is instanceof Sword? " + (warrior.weapon instanceof Sword)); // true
+
 console.log("Warrior.__proto__: " + JSON.stringify(warrior.__proto__));
